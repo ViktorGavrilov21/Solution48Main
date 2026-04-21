@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="logic.cpp" />
     <ClCompile Include="main01.cpp" />
+    <ClCompile Include="main02.cpp" />
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -45,3 +45,56 @@ int get_null(int array[], int size) {
 	}
 	return null;
 }
+int count_elements_less_than_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		count += array[i] < n ? 1 : 0;
+	}
+	return count;
+}
+int count_elements_equal_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		count += array[i] == n ? 1 : 0;
+	}
+	return count;
+}
+int count_elements_nut_equal_n(int array[], int size, int n) {
+	return size - count_elements_equal_n(array, size, n);
+}
+int count_elements_multiple_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		if (array[i] % n == 0) {
+			count++;
+		}
+	}
+	return count;
+}
+int count_elements_not_multiple_n(int array[], int size, int n) {
+	return size - count_elements_multiple_n(array, size, n);
+}
+int count_elements_modulo_more_than_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		int abs_element = array[i] < 0 ? -array[i] : array[i];
+		count += abs_element > n ? 1 : 0;
+	}
+	return count;
+}
+int count_elements_modulo_equal_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		int abs_element = array[i] < 0 ? -array[i] : array[i];
+		count += abs_element == n ? 1 : 0;
+	}
+	return count;
+}
+int count_elements_modulo_less_than_n(int array[], int size, int n) {
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		int abs_element = array[i] < 0 ? -array[i] : array[i];
+		count += abs_element < n ? 1 : 0;
+	}
+	return count;
+}
